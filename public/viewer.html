@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>gsplat.js Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="viewer-canvas"></canvas>
+
+    <div class="topbar">
+      <div class="title-wrap">
+        <div class="title" id="scene-title">Loading…</div>
+        <div class="subtitle" id="status-text">Preparing viewer</div>
+      </div>
+
+      <div class="toolbar">
+        <button id="btn-home" type="button">Home</button>
+        <button id="btn-front" type="button">Front</button>
+        <button id="btn-top" type="button">Top</button>
+        <button id="btn-fullscreen" type="button">Fullscreen</button>
+      </div>
+    </div>
+
+    <div class="help">
+      <strong>Desktop</strong>: drag to orbit, wheel to zoom, right-drag to pan<br />
+      <strong>Mobile</strong>: one finger orbit, two fingers pan/zoom
+    </div>
+
+    <div class="studio-glow"></div>
+  </div>
+
+  <script type="module" src="/viewer.js"></script>
+</body>
+</html>
