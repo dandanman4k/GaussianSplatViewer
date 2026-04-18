@@ -363,7 +363,6 @@ res.json({
 });
 ```
 
-This makes the viewer easy to embed in hospital systems, admin panels, patient portals, or imaging dashboards.
 
 ---
 
@@ -387,43 +386,4 @@ You have two common options.
 ></iframe>
 ```
 
-If auth is required, keep the API behind your normal session or token checks.
 
----
-
-## Troubleshooting
-
-### Blank viewer
-
-Check these first:
-
-```txt
-- The scene id in the URL is correct
-- /api/scenes/:id returns 200
-- splatUrl points to a real file
-- The chosen loader matches the file format
-- The browser console has no CORS or 404 errors
-```
-
-### Scene loads but camera is bad
-
-Your `center` and `radius` values are probably wrong. Start with:
-
-```json
-{
-  "center": [0, 0, 0],
-  "radius": 1
-}
-```
-
-Then refine from there.
-
-### Controls feel odd on mobile
-
-Reduce the default distance or add more fixed camera buttons.
-
----
-
-## Suggested next step
-
-If you plan to productionize this, the first upgrade I would make is to standardize the asset format across both viewers so the demo and the app-style viewer use the same loader path. That removes a sneaky little footgun from the project and makes integration much smoother.
